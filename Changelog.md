@@ -2,7 +2,7 @@
 
 Features:
  * Introduce ``pure`` functions. The pureness is not enforced yet, use with care.
- * ABI JSON: Include new field ``statemutability`` with values ``view``, ``nonpayable`` and ``payable``.
+ * ABI JSON: Include new field ``statemutability`` with values ``pure``, ``view``, ``nonpayable`` and ``payable``.
  * Parser: Display previous visibility specifier in error if multiple are found.
  * Syntax Checker: Support ``pragma experimental <feature>;`` to turn on experimental features.
  * Static Analyzer: Warn about large storage structures.
