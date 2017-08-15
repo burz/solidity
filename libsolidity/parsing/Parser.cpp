@@ -339,6 +339,8 @@ StateMutability Parser::parseStateMutability(Token::Value _token)
 		stateMutability = StateMutability::Payable;
 	else if (_token == Token::Constant)
 		stateMutability = StateMutability::View;
+	else if (_token == Token::Pure)
+		stateMutability = StateMutability::Pure;
 	else
 		solAssert(false, "Invalid state mutability specifier.");
 	m_scanner->next();
