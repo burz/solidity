@@ -104,8 +104,14 @@ bool ASTPrinter::visit(ParameterList const& _node)
 bool ASTPrinter::visit(FunctionDefinition const& _node)
 {
 	writeLine("FunctionDefinition \"" + _node.name() + "\"" +
-			  (_node.isPublic() ? " - public" : "") +
-			  (_node.stateMutability() == StateMutability::View ? " - const" : ""));
+		(_node.isPublic() ? " - public" : "") +
+		(
+			_node.stateMutability() == StateMutability::View ||
+			_node.stateMutability() == StateMutability::Pure ?
+			" - const" :
+			""
+		)
+	);
 	printSourcePart(_node);
 	return goDeeper();
 }
