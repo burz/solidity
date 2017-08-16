@@ -18,9 +18,6 @@ include(deps/jsoncpp.cmake)
 # Figure out what compiler and system are we using
 include(EthCompilerSettings)
 
-# Include helper macros
-include(EthExecutableHelper)
-
 # Include utils
 include(EthUtils)
 
