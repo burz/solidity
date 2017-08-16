@@ -507,6 +507,7 @@ Modifiers
 
 - ``constant`` for state variables: Disallows assignment (except initialisation), does not occupy storage slot.
 - ``constant`` for functions: Disallows modification of state - this is not enforced yet.
+- ``pure`` for functions: Disallows modification or access of state - this is not enforced yet.
 - ``anonymous`` for events: Does not store event signature as topic.
 - ``indexed`` for event parameters: Stores the parameter as topic.
 - ``payable`` for functions: Allows them to receive Ether together with a call.

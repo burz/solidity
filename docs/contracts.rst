@@ -475,7 +475,7 @@ Functions can be declared constant in which case they promise not to modify the 
 
     contract C {
         function f(uint a, uint b) constant returns (uint) {
-            return a * (b + 42);
+            return a * (b + 42) + now;
         }
     }
 
@@ -484,6 +484,27 @@ Functions can be declared constant in which case they promise not to modify the 
 
 .. warning::
   The compiler does not enforce yet that a constant method is not modifying state.
+
+.. _pure-functions:
+
+**************
+Pure Functions
+**************
+
+Functions can be declared pure in which case they promise not to read from or modify the state.
+
+::
+
+    pragma solidity ^0.4.16;
+
+    contract C {
+        function f(uint a, uint b) pure returns (uint) {
+            return a * (b + 42);
+        }
+    }
+
+.. warning::
+  The compiler does not enforce yet that a pure method is not reading from the state.
 
 .. index:: ! fallback function, function;fallback
 
