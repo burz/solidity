@@ -27,6 +27,7 @@ using namespace dev;
 
 string IndentedWriter::format() const
 {
+
 	string result;
 	for (auto const& line: m_lines)
 		result += string(line.indentation * 4, ' ') + line.contents + "\n";
